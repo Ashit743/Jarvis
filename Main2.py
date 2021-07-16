@@ -137,6 +137,7 @@ def weather():
 
 def Jarvis_command():
     try:
+        os.system('cls')
         with sr.Microphone() as source:
             print("Listening...")
             listener.adjust_for_ambient_noise(source)
@@ -144,6 +145,7 @@ def Jarvis_command():
             voice = listener.listen(source)
 
             command = listener.recognize_google(voice)
+            os.system('cls')
             if 'Jarvis' in command:
                 command=command.replace('Jarvis', '')
     except sr.WaitTimeoutError:
