@@ -11,19 +11,11 @@ import time as t # to avoid confusion in functions
 #for improving performance manually works really well
 import gc
 from tqdm.auto import tqdm
-
-
 gc.collect()
 def loading():
     print("Loading Modules...")
     for i in tqdm(range(100)):
         t.sleep(0.003)
-
-
-
-
-
-
 def hello():
     os.system('cls')
     filenames=["Hello1.txt","Hello2.txt"]
